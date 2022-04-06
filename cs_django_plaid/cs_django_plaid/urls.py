@@ -15,7 +15,15 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from app import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', views.index),
+    path('get_access_token', views.get_access_token),
+    path('set_access_token', views.set_access_token),
+    path('accounts', views.accounts),
+    path('item', views.item),
+    path('transactions', views.transactions),
+    path('create_public_token', views.create_public_token),
 ]
